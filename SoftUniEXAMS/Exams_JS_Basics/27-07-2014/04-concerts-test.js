@@ -4,7 +4,6 @@ function solve(input) {
         result = {},
         output = {};
 
-
     input.forEach(function (line) {
         line = line.split('|');
         band = line[0].trim();
@@ -18,21 +17,19 @@ function solve(input) {
         if(!result[town][venue]) {
             result[town][venue] = [];
         }
-
         if(result[town][venue].indexOf(band) === -1) {
             result[town][venue].push(band);
         }
-
     });
 
     Object.keys(result).sort().forEach(function (key) {
         output[key] = {};
         Object.keys(result[key]).sort().forEach(function (innerKey) {
             output[key][innerKey] = result[key][innerKey].sort();
-        })
-    })
+        });
+    });
 
-    console.log(JSON.stringify(output))
+    console.log(JSON.stringify(output));
 
 }
 
@@ -49,4 +46,4 @@ function solve(input) {
 //    'Metallica | London | 03-Oct-2014 | Olympic Stadium',
 //    'Iron Maiden | Sofia | 11-Apr-2016 | Lokomotiv Stadium',
 //    'Iron Maiden | Buenos Aires | 03-Mar-2014 | River Plate Stadium'
-//])
+//]);

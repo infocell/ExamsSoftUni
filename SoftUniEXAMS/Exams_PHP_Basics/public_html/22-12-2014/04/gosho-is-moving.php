@@ -1,5 +1,4 @@
 <?php
-//Plamen
 
 $luggage = preg_split('/C\|_\|/', $_GET['luggage'], -1, PREG_SPLIT_NO_EMPTY);
 $fTypeLuggage = $_GET['typeLuggage'];
@@ -18,25 +17,18 @@ foreach ($luggage as $row => $line) {
     $listOfNamesame = $line[2];
     preg_match('/(\d+\.\d+)/', $line[3], $weight);
     $weight = intval($weight[0]);
-//var_dump($typeLuggage);
+
     if (in_array($typeLuggage, $fTypeLuggage) && $fRoom == $room) {
-//        var_dump($typeLuggage);
-
-
         if (!isset($orderedLugages[$typeLuggage])) {
             $orderedLugages[$typeLuggage] = [];
         }
-
         if (!isset($orderedLugages[$typeLuggage][$room])) {
             $orderedLugages[$typeLuggage][$room] = [];
         }
-
         if (!isset($orderedLugages[$typeLuggage][$room][$listOfNamesame])) {
             $orderedLugages[$typeLuggage][$room][$listOfNamesame] = 0;
         }
-
         $orderedLugages[$typeLuggage][$room][$listOfNamesame] += $weight;
-
     }
 }
 

@@ -10,7 +10,6 @@ function solve(input) {
         number = Number(parseFloat(line).toFixed(2));
         if(prevNumber == undefined) {
             trend = 'fixed.png';
-
         } else {
             if(prevNumber == number) {
                 trend = 'fixed.png';
@@ -20,13 +19,10 @@ function solve(input) {
                 trend = 'down.png';
             }
         }
-
-
         console.log('<tr><td>'+ number.toFixed(2) + '</td><td><img src="' + trend + '"/></td></td>');
         prevNumber = number;
     });
     console.log('</table>');
-
 }
 
 solve([
@@ -43,4 +39,4 @@ solve([
     '35.001',
     '36.225'
 
-])
+]);

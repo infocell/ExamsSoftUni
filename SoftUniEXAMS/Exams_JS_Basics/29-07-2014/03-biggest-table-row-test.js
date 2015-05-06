@@ -18,7 +18,7 @@ function solve(input) {
 
             numbersArr = numbersArr.filter(function (elem) {
                 return elem !== '-';
-            })
+            });
 
             numbersArr.forEach(function (elem) {
                 sum += parseFloat(elem);
@@ -29,11 +29,10 @@ function solve(input) {
                 output = maxSum + ' = ';
                 numbersArr.forEach(function (elem) {
                     output += elem + ' + ';
-                })
+                });
             }
         }
     });
-
 
     if (output) {
         if (output.indexOf('+') > -1) {
@@ -41,7 +40,6 @@ function solve(input) {
         }
     }
     output ? console.log(output) : console.log('no data');
-
 }
 
 //solve([
@@ -60,4 +58,4 @@ function solve(input) {
 //    '<tr><td>Plovdiv</td><td>17.2</td><td>12.3</td><td>6.4</td></tr>',
 //    '<tr><td>Bourgas</td><td>-</td><td>24.3</td><td>-</td></tr>',
 //    '</table>'
-//])
+//]);

@@ -4,7 +4,6 @@ $text = $_GET['text'];
 
 //$text = preg_split('[\r\n]', $text, -1, PREG_SPLIT_NO_EMPTY);
 
-
 $countMatch = preg_match_all('/\s*([a-zA-Z\s-]+)\s*%\s*([a-zA-Z\s.-]+)\s*;\s*(\d{2}-\d{2}-\d{4})\s*-\s*([^\r\n]{0,100})/', $text, $match);
 //var_dump($match);
 
@@ -35,6 +34,4 @@ for ($i = 0; $i < $countMatch; $i++) {
     echo "<span>" . htmlspecialchars($summary) . "</span>\n";
 
     echo "</div>\n";
-
 }
-

@@ -42,8 +42,6 @@ function solve(input) {
     console.log(locations.join('\n'))
 }
 
-
-
 //solve([
 //    'Sirius 3 7',
 //    'Alpha-Centauri 7 5',

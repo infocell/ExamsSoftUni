@@ -48,7 +48,6 @@ function solve(input) {
             type: typeOfTheLuggage,
             transferredWith: transferredWith
         };
-
     });
 
     switch (sortingCriterion) {
@@ -71,7 +70,7 @@ function solve(input) {
                 }).forEach(function (innerKey) {
                     output[key][innerKey] = result[key][innerKey];
                 });
-            })
+            });
 
             break;
         case 'strict':
@@ -82,7 +81,6 @@ function solve(input) {
             break;
     }
     console.log(JSON.stringify(output));
-
 }
 
 solve([
@@ -93,4 +91,4 @@ solve([
     'Kiko.*.glasses.*.false.*.false.*.true.*.3.*.ATV',
     'Manov.*.socks.*.false.*.false.*.false.*.0.3.*.ATV',
     'luggage name'
-])
+]);

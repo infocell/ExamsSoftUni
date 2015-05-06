@@ -39,13 +39,11 @@ function solve(input) {
                 result[color].opponents.push(value);
                 break;
         }
-
     });
 
     sortedColor = Object.keys(result).sort();
 
     //console.log(sortedColor);
-
 
     for(i in sortedColor) {
         key = sortedColor[i];
@@ -61,17 +59,10 @@ function solve(input) {
             name: result[key].name,
             opponents: result[key].opponents,
             rank : rank
-
-
         };
     }
-
-
-
     console.log(JSON.stringify(output));
-
 }
-
 
 solve([
     'purple|age|99',

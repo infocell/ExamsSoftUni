@@ -1,6 +1,5 @@
 function solve(input) {
     //"use strict";
-
     var sortCriteria,
         students = [],
         trainers = [],
@@ -63,7 +62,7 @@ function solve(input) {
     result = {students: students, trainers: trainers};
     console.log(JSON.stringify(result));
 }
-//
+
 //solve([
 //    'level^courses',
 //    '{"id":0,"firstname":"Angel","lastname":"Ivanov","town":"Plovdiv","role":"student","grades":["5.89"],"level":4,"certificate":false}',

@@ -54,10 +54,8 @@ function solve(input) {
                 //arrResults[1] > arrResults[0] ? players[playerName2].setsWon += 1 : players[playerName2].setsLost += 1;
 
             });
-
             countL > countR ? players[playerName1].matchesWon += 1 : players[playerName2].matchesWon += 1;
             countL > countR ? players[playerName2].matchesLost += 1 : players[playerName1].matchesLost += 1;
-
 
             players[playerName1].gamesWon += sumL;
             players[playerName1].gamesLost += sumR;
@@ -92,7 +90,6 @@ function solve(input) {
             return a.name.toLowerCase().localeCompare(b.name.toLowerCase());
         }
     });
-
 
     console.log(JSON.stringify(output));
 }

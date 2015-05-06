@@ -14,7 +14,6 @@ function solve(input) {
         input[key] = line + Array(maxLength - line.length + 1).join(' ');
     });
 
-
     switch (degree) {
         case 0:
             console.log(input.join('\n'));
@@ -55,7 +54,7 @@ function solve(input) {
         } else if (deg === 270) {
             Object.keys(output).reverse().forEach(function (key) {
                 console.log(output[key].reverse().join(''));
-            })
+            });
             //console.log(output)
         }
     }

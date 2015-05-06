@@ -17,8 +17,6 @@ foreach ($html as $key=>$line) {
         $line = preg_replace('/\s+>/', '>', $line);
         $line = preg_replace('/\s+/', ' ', $line);
         $html[$key] = $line;
-//        var_dump($html);
-//    var_dump($match);
     }
     if($isMatchEnd) {
         if(in_array($matchEnd[2], $semanticHTML)) {
@@ -29,10 +27,6 @@ foreach ($html as $key=>$line) {
 }
 
 //var_dump($html);
-
-
-
-
 //echo (implode(PHP_EOL, $html));
 foreach ($html as $line) {
     echo $line . "\n";

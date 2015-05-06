@@ -35,7 +35,6 @@ function solve(input) {
 
         table = table.substring(0, table.length - 1);
 
-
     console.log('<table border="1">');
     console.log('<thead>');
     console.log('<tr><th colspan="3">Blades</th></tr>');
@@ -52,10 +51,9 @@ function solve(input) {
     //console.log(input)
 }
 
-
 //solve([
 //
-//])
+//]);
 //solve([
 //    '17.8',
 //    '19.4',

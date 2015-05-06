@@ -15,7 +15,6 @@ function solve(input) {
         snow,
         length;
 
-
     input.forEach(function(currentLine){
         arr = currentLine.split(/\s+/g);
         carModerl = arr[0];
@@ -33,7 +32,6 @@ function solve(input) {
         }
 
         extraFuel = luggageWeight * 0.01;
-
         baseConsum = baseConsum + extraFuel;
 
         if(routeNumber === 1) {
@@ -61,4 +59,4 @@ solve([
     'Golf petrol 2 150.75',
     'Lada gas 1 202',
     'Mercedes diesel 2 312.54'
-])
+]);

@@ -54,11 +54,8 @@ function solve(input) {
 
         res = matrix[pos.x][pos.y].match(/\{\!\}|\{\*\}|\{\&\}|\{\#\}/g);
 
-
         if (isChangePos && res !== null) {
             res.forEach(function (elem) {
-
-
                 switch (elem.substring(1, 2)) {
                     case '!' :
                         result['!'] += 1;
@@ -75,10 +72,7 @@ function solve(input) {
                 }
             });
         }
-
-
         //output += matrix[pos.x][pos.y].replace(elem, '@') + '|';
-
         if (isChangePos === true) {
             output += matrix[pos.x][pos.y].replace(/\{\!\}|\{\*\}|\{\&\}|\{\#\}/g, '@') + '|';
         }
@@ -86,7 +80,6 @@ function solve(input) {
 
     Object.keys(result).forEach(function (key) {
         outputObj += '\"' + key + '\"' + ':' + result[key] + ',';
-
     });
 
     console.log('{' + outputObj.substring(0, outputObj.length - 1) + '}');

@@ -19,7 +19,6 @@ function solve(input) {
             result[color] = {win: 0, loss: 0, opponents: []};
         }
 
-
         switch (prop) {
             case 'age' :
                 result[color][prop] = value;
@@ -36,9 +35,7 @@ function solve(input) {
                 result[color].opponents.push(value);
                 break;
         }
-
     });
-
 
     Object.keys(result).sort().forEach(function(keyColor){
         if(result[keyColor].age && result[keyColor].name) {
@@ -54,12 +51,8 @@ function solve(input) {
         }
     });
 
-
-
     console.log(JSON.stringify(output));
-
 }
-
 
 solve([
     'purple|age|99',

@@ -17,12 +17,10 @@ function solve(input) {
 
             if(row+1 < matrix.length) {
                 if (matrix[row][col] == 'o' && matrix[row + 1][col] == 'o') {
-
                     if(col+1 < matrix[row].length) {
                         if(matrix[row][col+1] == 'o' && matrix[row+1][col+1] == 'o') {
                             result.O += 1;
                         }
-
                         if(row+2 < matrix.length && matrix[row+2][col] == 'o' && matrix[row+2][col+1] == 'o') {
                             result.L +=1;
                         }
@@ -37,10 +35,7 @@ function solve(input) {
                                 result.S +=1;
                             }
                         }
-
-
                     }
-
                     if(row+2 < matrix.length && col-1 >= 0) {
                         if(matrix[row+2][col] == 'o' && matrix[row+2][col-1] == 'o'){
                             result.J += 1;
@@ -56,7 +51,6 @@ function solve(input) {
         });
     });
     console.log(JSON.stringify(result));
-
 }
 
 solve([
@@ -70,4 +64,4 @@ solve([
     'ooo',
     'ooo',
     'ooo'
-])
+]);

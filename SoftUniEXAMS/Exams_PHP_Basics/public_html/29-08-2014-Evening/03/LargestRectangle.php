@@ -86,7 +86,6 @@ for ($row = 0; $row < count($matrix); $row++) {
 
         $ch = htmlspecialchars($matrix[$row][$col]);
 
-
 //        $max->topRow = 0;
 //        $max->bottomRow = 0;
 //        $max->leftCol = 0;
@@ -106,6 +105,5 @@ for ($row = 0; $row < count($matrix); $row++) {
 }
 
 echo "</table>";
-
 
 //var_dump($max);

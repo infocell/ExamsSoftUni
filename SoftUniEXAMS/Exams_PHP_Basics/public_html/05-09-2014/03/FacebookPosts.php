@@ -35,18 +35,13 @@ foreach ($fbPosts as $fbpost) {
         $commentsOut .= '</div>';
     }
 
-
     $article = '<article>';
     $article .= "<header><span>{$author}</span><time>{$dateOut}</time></header>";
     $article .= "<main><p>{$post}</p></main>";
     $article .= "<footer><div class=\"likes\">{$likesCount} people like this</div>{$commentsOut}</footer>";
     $article .= '</article>';
 
-
-
-
     $res[] = new ClassArticle($date, $article);
-
 }
 
 usort($res, function ($a, $b) {

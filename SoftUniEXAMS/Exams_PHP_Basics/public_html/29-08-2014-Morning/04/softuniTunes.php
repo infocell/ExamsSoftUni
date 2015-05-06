@@ -7,9 +7,7 @@ $order = trim($_GET['order']);
 
 $songsArr = array();
 
-
 $textArr = preg_split('/[\r\n]/', $text, -1, PREG_SPLIT_NO_EMPTY);
-
 
 foreach ($textArr as $line) {
     $line = trim($line);
@@ -34,7 +32,6 @@ usort($songsArr, function($a, $b) use ($property, $order) {
     }
     return ($order == 'ascending' ^ $a->$property < $b->$property) ?  1: -1;
 });
-
 
 echo "<table>\n";
 echo "<tr><th>Name</th><th>Genre</th><th>Artists</th><th>Downloads</th><th>Rating</th></tr>\n";

@@ -29,5 +29,3 @@ foreach ($result as $elem) {
 
 echo $output;
 echo '</ul>';
-
-

@@ -79,7 +79,6 @@ foreach ($productsArr as $key=>$product) {
     $price = number_format($product->price, 2, '.', '');
     $output .= "<span class=\"price\">{$price}</span>";
     $output .= "</div>";
-
 }
 
 echo $output;

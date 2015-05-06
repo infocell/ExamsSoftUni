@@ -62,9 +62,7 @@ function solve(input) {
                 console.log(output)
             }
             break;
-
     }
-
 }
 
 solve(

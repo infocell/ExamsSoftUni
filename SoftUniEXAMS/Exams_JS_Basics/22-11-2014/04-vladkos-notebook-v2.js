@@ -45,7 +45,6 @@ function solve(input) {
             rank: ((result[key].wins + 1) / (result[key].losses + 1)).toFixed(2)
         }
     });
-
     console.log(JSON.stringify(output));
 }
 

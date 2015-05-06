@@ -8,7 +8,6 @@ function solve(input) {
     }
 }
 
-
 solve([ '<a href="http://softuni.bg" class="new"></a>' ]);
 console.log();
 solve([ '<p>This text has no links</p>' ]);

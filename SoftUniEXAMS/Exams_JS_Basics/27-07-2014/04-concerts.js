@@ -6,7 +6,6 @@ function solve(input) {
         town,
         venue;
 
-
     input.forEach(function(line){
         lineArr = line.split('|');
         band = lineArr[0].trim();
@@ -22,11 +21,9 @@ function solve(input) {
         if(result[town][venue].indexOf(band) == -1) {
             result[town][venue].push(band);
         }
-
     });
 
     output = sortedProperties(result);
-
 
     Object.keys(output).forEach(function(key){
         output[key] = sortedProperties(output[key]);
@@ -34,10 +31,7 @@ function solve(input) {
         Object.keys(output[key]).forEach(function(keyIn){
             output[key][keyIn].sort();
         });
-
     });
-
-
 
     function sortedProperties(obj) {
         var returnSortedObj = {};
@@ -45,13 +39,8 @@ function solve(input) {
             returnSortedObj[key] = obj[key];
         });
         return returnSortedObj;
-
     }
-
-
     console.log(JSON.stringify(output));
-
-
 }
 
 solve([

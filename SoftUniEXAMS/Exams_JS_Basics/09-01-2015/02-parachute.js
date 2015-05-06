@@ -7,10 +7,7 @@ function solve(matrix) {
         nextLine,
         output;
 
-
-
     while(isFlying) {
-
         nextLine = matrix[row + 1];
         wind = 0;
         for (var i in nextLine) {
@@ -40,7 +37,6 @@ function solve(matrix) {
             break;
     }
 
-
     console.log(output);
     console.log(row + ' ' + col)
 
@@ -53,7 +49,6 @@ function solve(matrix) {
             }
         }
     }
-
 }
 
 solve(
@@ -82,4 +77,4 @@ solve(
     '<-------/----\\/--------\\-',
     '\\------/--------------<-\\',
     '-\\___~/------<-----------'
-    ])
+    ]);

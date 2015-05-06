@@ -18,23 +18,17 @@ function solve(input) {
             if(!lineObj[field]){
                 lineObj[field] = [];
             }
-
             lineObj[field].push(value);
         }
 
        // console.log(lineObj);
 
-
         output = '';
         Object.keys(lineObj).forEach(function(key){
             output += key + '=['+lineObj[key].join(', ')+']';
         });
-
         console.log(output);
-
     });
-
-
 }
 
 solve([
@@ -42,4 +36,4 @@ solve([
     'foo=poo%20&value=valley&dog=wow+',
     'url=https://softuni.bg/trainings/coursesinstances/details/1070',
     'https://softuni.bg/trainings.asp?trainer=nakov&course=oop&course=php'
-])
+]);

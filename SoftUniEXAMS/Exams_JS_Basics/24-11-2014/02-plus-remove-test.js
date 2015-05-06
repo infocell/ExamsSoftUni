@@ -11,7 +11,6 @@ function solve(input) {
 
     for (i = 1; i < input.length - 1; i += 1) {
         for (j = 1; j < input[i].length - 1; j += 1) {
-
             if (j < input[i + 1].length && j < input[i - 1].length) {
                 if (input[i][j].toUpperCase() === input[i - 1][j].toUpperCase() &&
                     input[i][j].toUpperCase() === input[i + 1][j].toUpperCase() &&
@@ -38,7 +37,7 @@ function solve(input) {
     }
     //console.log(input);
 }
-//
+
 //solve([
 //    'ab**l5',
 //    'bBb*555',
@@ -60,4 +59,4 @@ function solve(input) {
 //    '@6@t@*@*ego',
 //    'vdig*****ne6',
 //    'li??^*^*'
-//])
+//]);

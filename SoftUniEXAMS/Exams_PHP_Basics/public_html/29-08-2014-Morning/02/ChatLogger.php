@@ -27,16 +27,12 @@ usort($messagesArr, function ($a, $b) {
 //var_dump($currentTimeFull);
 //var_dump($messagesArr[$countMatches - 1]);
 
-
 $intervalFull = $currentTimeFull->diff($messagesArr[$countMatches - 1]->dateFull);
 $intervalFull = $messagesArr[$countMatches - 1]->dateFull->diff($currentTimeFull);
 $interval = $messagesArr[$countMatches-1]->date->diff($currentTime);
 //var_dump($messagesArr);
 //var_dump($intervalFull);
 $lastActivity = '';
-
-
-
 
 if ($interval->days > 1) {
     $lastActivity = $messagesArr[$countMatches - 1]->date->format('d-m-Y');
@@ -50,11 +46,9 @@ if ($interval->days > 1) {
     $lastActivity = 'a few moments ago';
 }
 
-
 foreach ($messagesArr as $m) {
     echo "<div>". htmlspecialchars($m->message) . "</div>\n";
 }
 echo "<p>Last active: <time>{$lastActivity}</time></p>";
-
 
 //echo $lastActivity;

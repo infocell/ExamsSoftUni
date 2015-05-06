@@ -3,7 +3,6 @@ function solve(input) {
     var teams = {},
         sortedTeams = {},
         homeTeam, awayTeam, homeGoals, awayGoals;
-
     input.forEach(function (line) {
         line = line.replace(/\/|:|-/g, '*').split('*');
         homeTeam = line[0].trim();
@@ -11,10 +10,8 @@ function solve(input) {
         homeGoals = Number(line[2]);
         awayGoals = Number(line[3]);
         //console.log(line)
-
         pushInTeams(homeTeam, awayTeam, homeGoals, awayGoals);
         pushInTeams(awayTeam, homeTeam, awayGoals, homeGoals);
-
     });
 
     Object.keys(teams).sort().forEach(function(key) {
@@ -34,7 +31,6 @@ function solve(input) {
                 matchesPlayedWith: []
             };
         }
-
         //console.log(team1 + ' ' + team2 + ' ' + goals1 + ' ' + goals2);
         teams[team1].goalsScored += goals1;
         teams[team1].goalsConceded += goals2;

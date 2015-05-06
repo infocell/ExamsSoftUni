@@ -1,5 +1,4 @@
 function solve(input) {
-
     var color,
         prop,
         value,
@@ -9,7 +8,6 @@ function solve(input) {
         sortedObj,
         colorKey,
         rank;
-
 
     input.forEach(function(elem) {
         line = elem.split('|');
@@ -33,17 +31,14 @@ function solve(input) {
             case 'loss' :
                 result[color][prop] += 1;
                 result[color].opponents.push(value);
-
         }
     });
 
     sortedObj = Object.keys(result).sort();
 
-
     //sortedObj.forEach(function(elem){
 
     for(i in sortedObj) {
-
         colorKey = sortedObj[i];
 
         if (!result[colorKey].age || !result[colorKey].name) {
@@ -58,12 +53,8 @@ function solve(input) {
             name: result[colorKey].name,
             opponents: result[colorKey].opponents,
             rank: rank
-
         }
-
-
     }
-
     console.log(JSON.stringify(output));
 }
 

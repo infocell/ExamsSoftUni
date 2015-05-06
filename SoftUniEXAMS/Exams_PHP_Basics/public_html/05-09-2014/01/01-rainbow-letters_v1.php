@@ -1,11 +1,9 @@
 <?php
-
 $text = $_GET['text'];
 $red = str_pad(dechex(trim($_GET['red'])), 2, '0', STR_PAD_LEFT);
 $green = str_pad(dechex(trim($_GET['green'])), 2, '0', STR_PAD_LEFT);
 $blue = str_pad(dechex(trim($_GET['blue'])), 2, '0', STR_PAD_LEFT);
 $nth = $_GET['nth'];
-
 
 $rgb = $red . $green . $blue;
 

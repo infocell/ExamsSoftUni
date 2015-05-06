@@ -29,7 +29,7 @@ solve([ 'Coin 1',
     'coin 200',
     'coin 500',
     'cigars 1' ]);
-console.log()
+console.log();
 solve([ 'coin 1 ',
     'coin two',
     'coin 5',
@@ -37,4 +37,4 @@ solve([ 'coin 1 ',
     'coin 20',
     'coin 50',
     'coin hundred',
-    'cigars 1' ])
+    'cigars 1' ]);

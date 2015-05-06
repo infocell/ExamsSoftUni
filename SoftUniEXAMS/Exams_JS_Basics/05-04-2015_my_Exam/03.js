@@ -55,7 +55,7 @@ function solve(input) {
         }
 
         res = matrix[pos.x][pos.y].match(/\{\!\}|\{\*\}|\{\&\}|\{\#\}/g);
-//console.log('fdadfasfdas' + res );
+	//console.log('fdadfasfdas' + res );
         if (isChangePos && res !== null) {
             output += matrix[pos.x][pos.y].replace(res, '@') + '|';
             switch (res[0].substring(1, 2)) {
@@ -78,13 +78,10 @@ function solve(input) {
 
     Object.keys(result).forEach(function (key) {
         outputObj += '\"' +key + '\"' + ': ' + result[key] + ',';
-
     });
-
 
     console.log('{' + outputObj.substring(0,outputObj.length - 1) + '}');
     output !== '' ? console.log(output.substring(0, output.length - 1)) : console.log('no');
-
 }
 
 //solve(['right, up, up, down','asdf, as{#}aj{g}dasd, kjldk{}fdffd, jdflk{#}jdfj','tr{X}yrty, zxx{*}zxc, mncvnvcn, popipoip','poiopipo, nmf{X}d{X}ei, mzoijwq, omcxzne']);

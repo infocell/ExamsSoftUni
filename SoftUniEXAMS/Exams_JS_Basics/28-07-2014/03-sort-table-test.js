@@ -16,19 +16,15 @@ function solve(input) {
         products.sort(function(a, b) {
             return a.price === b.price ? a.product.localeCompare(b.product) : a.price - b.price;
         });
-
     });
     console.log(input[0]);
     console.log(input[1]);
 
     products.forEach(function (obj) {
         console.log('<tr><td>' + obj.product + '</td><td>' + obj.price + '</td><td>' + obj.votes + '</td></tr>');
-    })
-
+    });
     console.log(input[input.length-1]);
-
 }
-
 
 //solve([
 //    '<table>',
@@ -40,4 +36,4 @@ function solve(input) {
 //    '<tr><td>Ariana Grapefruit 1.5 l</td><td>1.85</td><td>+7</td></tr>',
 //    '<tr><td>Coffee Davidoff 250 gr.</td><td>11.99</td><td>+11</td></tr>',
 //    '</table>'
-//])
+//]);

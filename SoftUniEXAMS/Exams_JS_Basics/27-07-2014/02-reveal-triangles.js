@@ -9,7 +9,6 @@ function solve(input) {
             });
     });
 
-
     for (var i = 1; i < input.length; i++) {
         for (var j = 1; j < input[i].length-1; j++) {
 
@@ -35,8 +34,6 @@ function solve(input) {
         console.log(output)
     });
 }
-
-
 
 //solve([
 //    'abcdexgh',

@@ -4,7 +4,6 @@ $jTable = json_decode($_GET['jsonTable']);
 //var_dump($_GET);
 //var_dump($jTable);
 
-
 $columns = $jTable[0];
 $numbersOfSymbols = [];
 
@@ -46,8 +45,6 @@ for ($row = 0; $row < count($matrix); $row++) {
     for ($col = 0; $col < $columns; $col++) {
         if (isset($matrix[$row][$col])) {
             echo "<td style='background:#CAF'>" . htmlentities(chr($matrix[$row][$col])) . "</td>";
-
-
         } else {
             echo '<td></td>';
         }
@@ -55,6 +52,5 @@ for ($row = 0; $row < count($matrix); $row++) {
     echo '</tr>';
 }
 echo '</table>';
-
 
 //var_dump($matrix);

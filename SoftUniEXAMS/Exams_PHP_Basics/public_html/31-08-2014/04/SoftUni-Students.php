@@ -69,7 +69,6 @@ usort($studentsArr, function ($a, $b) {
     }
 });
 
-
 $output = '<table>';
 $output .= '<thead><tr><th>Id</th><th>Username</th><th>Email</th><th>Type</th><th>Result</th></tr></thead>';
 
@@ -79,7 +78,6 @@ foreach ($studentsArr as $student) {
     $email = htmlspecialchars($student->email);
     $type = htmlspecialchars($student->type);
     $result = htmlspecialchars($student->result);
-
 
     $output .= "<tr><td>{$id}</td><td>{$username}</td><td>{$email}</td><td>{$type}</td><td>{$result}</td></tr>";
 }

@@ -27,18 +27,12 @@ function solve(input) {
         });
         console.log(output);
     });
-
-
     //console.log(result)
-
 }
 
-
 solve([
-
     'foo=%20foo&value=+val&foo+=5+%20+203',
     'foo=poo%20&value=valley&dog=wow+',
     'url=https://softuni.bg/trainings/coursesinstances/details/1070',
     'https://softuni.bg/trainings.asp?trainer=nakov&course=oop&course=php'
-
-])
+]);

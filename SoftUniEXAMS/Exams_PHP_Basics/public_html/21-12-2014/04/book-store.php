@@ -1,8 +1,6 @@
 <?php
-
 class Book
 {
-
     private $author;
     private $name;
     private $genre;
@@ -18,7 +16,6 @@ class Book
         $this->price = trim($price);
         $this->publishDate = new DateTime($publishDate, new DateTimeZone('Europe/Sofia'));
         $this->info = trim($info);
-
     }
 
     public function getAuthor() {
@@ -40,7 +37,6 @@ class Book
     public function getInfo() {
         return $this->info;
     }
-
 }
 
 $books = [];
@@ -65,8 +61,6 @@ foreach ($textArr as $line) {
     if ($price >= $minPrice && $price <= $maxPrice) {
         $books[] = new Book($author, $name, $genre, $price, $publishDate, $info);
     }
-
-
 }
 //var_dump($books);
 
@@ -80,7 +74,6 @@ function sortByGenre($a, $b) {
         return strcmp($a->getGenre(), $b->getGenre());
     }
 }
-
 
 function sortByAuthor($a, $b) {
     global $order;
@@ -100,7 +93,6 @@ switch($sort) {
                 return $a->getPublishDate() > $b->getPublishDate();
             }
         });
-
         break;
     case 'author':
         usort($books, function($a, $b) {
@@ -125,10 +117,6 @@ switch($sort) {
         break;
 }
 
-
-
-
-
 $output = '';
 foreach ($books as $obj) {
 //    var_dump($obj->getAuthor());
@@ -143,9 +131,6 @@ foreach ($books as $obj) {
     $output .= '</ul>';
     $output .= '</div>';
 }
-
-
-
 
 echo $output;
 

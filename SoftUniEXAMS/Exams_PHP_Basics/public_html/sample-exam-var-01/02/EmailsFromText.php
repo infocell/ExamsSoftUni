@@ -4,7 +4,6 @@ $blacklist = preg_split('/\s+/', $_GET['blacklist']);
 
 preg_match_all('/[\w\+\_\-]+@[\w\-]+\.[\w\-\.]+/', $text, $listOfEmails);
 
-
 $listOfEmails = $listOfEmails[0];
 
 foreach ($listOfEmails as $key => $email) {

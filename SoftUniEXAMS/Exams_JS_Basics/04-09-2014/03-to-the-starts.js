@@ -49,9 +49,7 @@ function solve(input) {
         if(current.y > 30 || current.x > 30) {
             return
         }
-
     }
-
 }
 
 solve([
@@ -60,25 +58,22 @@ solve([
     'Gamma-Cygni 10 10',
     '8 1',
     '6'
-])
+]);
 
 console.log();
 
 solve([
-
     'Terra-Nova 16 2',
     'Perseus 2.6 4.8',
     'Virgo 1.6 7',
     '2 5',
     '4'
-
-
 ]);
-console.log()
+console.log();
 solve([
     'starScorpius 2.3 10',
     'starAltair 23.0 4',
     'starAquarius 17.6 3.3',
     '1.8 10.9',
     '14'
-])
+]);

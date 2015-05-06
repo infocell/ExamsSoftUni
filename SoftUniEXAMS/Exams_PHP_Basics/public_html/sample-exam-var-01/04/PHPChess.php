@@ -13,9 +13,7 @@ foreach ($board as $line) {
     if(count($line) != 8) {
         theEnd();
     }
-//var_dump($pieces);
     foreach ($line as $key=>$cell) {
-//        echo $cell;
         if(!in_array($cell, $pieces)) {
             theEnd();
         }
@@ -34,7 +32,6 @@ class Chess {
     var $Rook = 0;
     var $Bishop = 0;
 }
-
 
 $chess = new Chess();
 
@@ -62,11 +59,8 @@ foreach ($board as $line) {
             case ' ' :
                 break;
             default :
-//                theEnd();
         }
-
     }
-
 }
 $output = '<table>';
 foreach ($board as $line) {

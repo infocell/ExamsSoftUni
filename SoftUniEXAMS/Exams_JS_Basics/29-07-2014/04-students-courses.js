@@ -1,9 +1,4 @@
-/**
- * Created by infocell on 3/23/15.
- */
-
 function solve(input) {
-
     var courses = {},
         output = {},
         student,
@@ -28,25 +23,15 @@ function solve(input) {
             courses[course].students.push(student);
         }
         courses[course].counter +=1;
-
     });
 
-
-
     Object.keys(courses).sort().forEach(function(key){
-
-
-
         output[key] = {
             avgGrade : parseFloat((courses[key].grade / courses[key].counter).toFixed(2)),
             avgVisits : parseFloat((courses[key].visits / courses[key].counter).toFixed(2)),
             students: courses[key].students.sort()
         }
-
-
     });
-
-
     console.log(JSON.stringify(output));
     //console.log(courses);
 }

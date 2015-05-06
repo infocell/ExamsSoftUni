@@ -23,10 +23,7 @@ foreach ($out[1] as $o) {
     }
 }
 
-
 $sum ? $output = $sum : $output = 'nothing';
 
 echo ($startKey && $endKey) ? "<p>The total value is: <em>{$output}</em></p>" : "<p>A key is missing</p>";
 
-
-//sudo gedit /boot/grub2/grub.cfg

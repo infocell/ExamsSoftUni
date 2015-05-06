@@ -25,24 +25,25 @@ function solve(input) {
                 if(result[i] != '-') {
                     output += result[i] + ' + ';
                 }
-
             }
         }
     }
     output ? console.log(output.substring(0, output.length-2)): console.log('no data');
-
 }
 
 solve([
 ]);
 
-
-solve(['<table>',
+solve([
+'<table>',
 '<tr><th>Town</th><th>Store1</th><th>Store2</th><th>Store3</th></tr>',
 '<tr><td>Sofia</td><td>-</td><td>-</td><td>-</td></tr>',
-'</table>']) ;
+'</table>'
+]) ;
 
-solve(['<table>',
+solve([
+'<table>',
 '<tr><th>Town</th><th>Store1</th><th>Store2</th><th>Store3</th></tr>',
 '<tr><td>Sofia</td><td>12850</td><td>-560</td><td>20833</td></tr>',
-'<tr><td>Rousse</td><td>-</td><td>50000.0</td><td>-</td></tr>']);
+'<tr><td>Rousse</td><td>-</td><td>50000.0</td><td>-</td></tr>'
+]);

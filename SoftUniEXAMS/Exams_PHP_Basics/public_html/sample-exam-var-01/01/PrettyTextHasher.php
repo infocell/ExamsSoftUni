@@ -14,7 +14,6 @@ foreach ($stringInArr as $key => $ch) {
     $textModification .= ($key % 2 == 0) ? (chr(ord($ch) + $hashValue)) : (chr(ord($ch) - $hashValue));
 }
 
-
 $style = "style=\"font-size:$fontSize;";
 $style .= ($fontStyle == 'bold') ? "font-weight:$fontStyle;\"": "font-style:$fontStyle;\"";
 
@@ -25,5 +24,4 @@ $style .= ($fontStyle == 'bold') ? "font-weight:$fontStyle;\"": "font-style:$fon
 //var_dump($style);
 
 echo "<p $style>" . $textModification . '</p>';
-
 

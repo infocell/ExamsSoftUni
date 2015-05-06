@@ -18,7 +18,6 @@ function solve(input) {
         }
         console.log(output);
     }
-
     console.log('</ul>');
 }
 

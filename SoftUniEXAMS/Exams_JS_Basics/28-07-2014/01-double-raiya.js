@@ -6,7 +6,6 @@ function solve(input) {
     var output = '<ul>\n';
     for (var i = start; i <= end; i++) {
         output += '<li>' + checkDoubleRakiya(i) + '</li>\n'
-
     }
     output += '</ul>';
     console.log(output);

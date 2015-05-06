@@ -40,13 +40,11 @@ function solve(input) {
         }
     });
 
-
     console.log('</tbody>');
     console.log('</table>');
 }
 
 solve([
-
     '17.8',
     '19.4',
     '13',
@@ -54,5 +52,4 @@ solve([
     '126.96541651',
     '3',
     '150'
-
-])
+]);

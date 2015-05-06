@@ -3,7 +3,6 @@ function solve(input) {
     String.prototype.replaceAt=function(index, character) {
         return this.substr(0, index) + character + this.substr(index+character.length);
     }
-
     var output = '',
         i,
         j,
@@ -13,25 +12,15 @@ function solve(input) {
         matrix[i] = [];
         for (j = 0; j < input[i].length; j++) {
             matrix[i][j] = true;
-
         }
-
     }
 
     for (i = 1; i < input.length-1; i++) {
         var row1Length = input[i-1].length;
         var row3Length = input[i+1].length;
 
-
         for (var j = 1; j < input[i].length-1; j++) {
-
-
             if(j < row1Length && j < row3Length) {
-
-
-
-
-
                 if (input[i].charAt(j).toUpperCase() == input[i][j+1].toUpperCase() &&
                     input[i].charAt(j).toUpperCase() == input[i][j-1].toUpperCase() &&
                     input[i].charAt(j).toUpperCase() == input[i+1][j].toUpperCase() &&
@@ -42,17 +31,10 @@ function solve(input) {
                     matrix[i][j-1] = false;
                     matrix[i-1][j] = false;
                     matrix[i+1][j] = false;
-
                 }
-
             }
-
-
         }
-
-
     }
-
 
     for(var i in matrix) {
         output = '';
@@ -66,9 +48,6 @@ function solve(input) {
 
     //console.log();
     //console.log(matrix);
-
-
-
 }
 
 solve(
@@ -88,10 +67,8 @@ solve(
         'as*',
         'tt',
         'ttt'
-
     ]
-
-)
+);
 
 solve([
 
@@ -100,4 +77,4 @@ solve([
     '888ttt<<',
     '*8*0t>>hi'
 
-])
+]);

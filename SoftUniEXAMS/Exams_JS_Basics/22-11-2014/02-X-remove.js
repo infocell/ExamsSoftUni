@@ -54,7 +54,7 @@ function solve(input) {
 //    'Abmbh',
 //    'aa bab',
 //    'ababvvvv'
-//])
+//]);
 //
 solve([
     '8888888',
@@ -62,8 +62,6 @@ solve([
     '808*888',
     '0**8*8?'
 ]);
-
-
 
 solve([
     'puoUdai',
@@ -74,5 +72,4 @@ solve([
     '8l8o860',
     'M8i8',
     '8e8!8?!'
-
-])
+]);

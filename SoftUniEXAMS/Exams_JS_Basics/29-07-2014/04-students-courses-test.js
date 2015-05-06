@@ -45,7 +45,6 @@ function solve(input) {
     console.log(JSON.stringify(sortedCourses));
 }
 
-
 solve([
     'Peter Nikolov | PHP  | 5.50 | 8',
     'Maria Ivanova | Java | 5.83 | 7',

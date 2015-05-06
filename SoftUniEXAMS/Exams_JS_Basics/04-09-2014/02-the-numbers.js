@@ -9,7 +9,7 @@ function solve(input) {
     arr = arr.map(function(elem){
         hex = Number(elem).toString(16).toUpperCase();
         return '0x' + Array(5-hex.length).join('0') + hex;
-    })
+    });
     console.log(arr.join('-'));
 }
 
@@ -23,4 +23,4 @@ solve([
 
 solve([
     '20'
-])
+]);

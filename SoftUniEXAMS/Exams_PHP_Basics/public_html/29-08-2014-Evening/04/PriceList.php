@@ -5,8 +5,6 @@ $pattern = '/<tr>\s*<td>\s*([\w\W]+?)\s*<\/td>\s*<td>\s*([\w\W]+?)\s*<\/td>\s*<t
 
 $countMatches = preg_match_all($pattern, $priceList, $matches);
 
-
-
 $categoriesArr = array();
 
 for($i= 0; $i < $countMatches; $i++) {

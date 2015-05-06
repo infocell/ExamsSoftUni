@@ -47,14 +47,12 @@ function solve(input) {
                 type = 'other';
             }
 
-
             result[ownerName][luggageName] = {
                 kg : Number(weightInKg),
                 fragile : (isFragile === 'true' ? true : false),
                 type : type,
                 transferredWith : transferedWith
             };
-
         }
     });
 
@@ -83,14 +81,9 @@ function solve(input) {
             });
             break;
     }
-
-
     //console.log(JSON.stringify(result));
     console.log(JSON.stringify(output));
-
-
 }
-
 
 solve([
     'Yana Slavcheva.*.clothes.*.false.*.false.*.false.*.2.2.*.backpack',

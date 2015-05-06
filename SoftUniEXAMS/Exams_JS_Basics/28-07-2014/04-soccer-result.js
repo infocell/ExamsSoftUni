@@ -13,7 +13,7 @@ function solve(input) {
         teamAway = lineArr[1].trim();
         goalsHome = parseInt(lineArr[2].trim());
         goalsAway = parseInt(lineArr[3].trim());
-        //console.log(teamHome + ' ' + teamAway+ ' '+goalsHome + ' '  + goalsAway)
+        //console.log(teamHome + ' ' + teamAway+ ' '+goalsHome + ' '  + goalsAway);
 
         putTeamsInObj(teamHome, goalsHome, teamAway, goalsAway);
         putTeamsInObj(teamAway, goalsAway, teamHome, goalsHome);
@@ -23,24 +23,19 @@ function solve(input) {
         Object.keys(result).forEach(function(elem){
            result[elem].matchesPlayedWith.sort();
         });
-
-
     });
 
     function putTeamsInObj(teamH, goalsH, teamA, goalsA){
        if(!result[teamH]) {
-
            result[teamH] = {
                goalsScored : 0,
                goalsConceded : 0,
                matchesPlayedWith : []
            };
-
        }
 
         result[teamH].goalsScored += goalsH;
         result[teamH].goalsConceded += goalsA;
-
 
         if(result[teamH].matchesPlayedWith.indexOf(teamA) == -1) {
             result[teamH].matchesPlayedWith.push(teamA);
@@ -55,9 +50,7 @@ function solve(input) {
         //console.log(sorted)
         return sorted;
     }
-
     console.log(JSON.stringify(result));
-
 }
 
 solve([

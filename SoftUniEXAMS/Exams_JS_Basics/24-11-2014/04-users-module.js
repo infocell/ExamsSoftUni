@@ -6,14 +6,10 @@ function solve(input) {
         trainers = [],
         sum = 0,
         temp;
-
     input.shift()
-
 
     input.forEach(function(line){
         line = JSON.parse(line);
-
-
         if (line.role == 'student') {
             sum = 0;
             line.grades.forEach(function(elem){
@@ -28,7 +24,7 @@ function solve(input) {
                 level: line.level,
                 averageGrade: (sum/line.grades.length).toFixed(2),
                 certificate: line.certificate
-            })
+            });
         }
 
         if (line.role == 'trainer') {
@@ -42,7 +38,6 @@ function solve(input) {
         }
     });
 
-
     if(sortCriteria[0] == 'name') {
         students.sort(function(a,b){
             //console.log(a.firstname + ' ' + b.firstname + ' ' + a.lastname + ' ' + b.lastname)
@@ -52,7 +47,7 @@ function solve(input) {
     if(sortCriteria[0] == 'level') {
         students.sort(function(a,b){
             return (a.level != b.level) ? parseInt(a.level) - parseInt(b.level) : parseInt(a.id) - parseInt(b.id);
-        })
+        });
     }
 
     if(sortCriteria[1] == 'courses') {
@@ -72,7 +67,6 @@ function solve(input) {
     console.log(JSON.stringify(result));
     //console.log(JSON.stringify(trainers))
 }
-
 
 //solve([
 //
@@ -162,4 +156,4 @@ function solve(input) {
 //    '{"id":82,"firstname":"Bobi","lastname":"Dimitrova","town":"Burgas","role":"student","grades":["3.00","2.58","3.44","2.96"],"level":3,"certificate":false}',
 //    '{"id":83,"firstname":"Plamen","lastname":"Nakova","town":"Sevlievo","role":"student","grades":["2.93"],"level":3,"certificate":false}'
 //
-//])
+//]);

@@ -1,6 +1,4 @@
-
 function solve(input) {
-
     var file,
         extension,
         memory,
@@ -47,4 +45,4 @@ solve([
     'kindleInstaller .exe 120MB',
     'setup .msi 33.4MB',
     'winBlock .bat 1MB'
-])
+]);
